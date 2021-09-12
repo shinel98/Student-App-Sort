@@ -25,12 +25,14 @@ public class Main {
 		list.add(new Student(9,"종윤", 24));
 		list.add(new Student(10,"성진", 24));
 		
+		System.out.println("Student List (ordered by name)");
 		Collections.sort(list);
-		
 		for(Student e : list) 
 			System.out.println(e.toString());
-		
-		
-				
+		System.out.println("Student List (reverse ordered by name)");
+		Collections.sort(list, Collections.reverseOrder());
+		for(int i=0; i<list.size(); i++) {
+			System.out.println(list.get(i).toString());
+		}
 	}
 }
